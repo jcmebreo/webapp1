@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    </head>
+ 
+<body class="bg-light">
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-5">
+    <img src="logo.png" style="width: 32px;">
+    <a class="navbar-brand"  style="font-family: 'Bebas Neue'; font-size: 40px;">JACE.COM</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" style="font-family: 'Bebas Neue'; font-size: 18px;">(John Carlo M. Ebreo)
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        </ul>
+        <button class="inline my-2 my-lg-0 btn btn-primary "style="font-family: 'Bebas Neue'; font-size: 20px; color:white;">
+        
+        Contact: (johncarloebreo@gmail.com)
+        
+      </button>
+    </div>
+  </nav>
+
+
+    <!-- Time and Flag -->
+    <center>
+      <div>
+        <% if(pName.tZoneID == "Asia/Kabul"){%>
+          <div>
+            <img src="Afghanistan.png" style="margin-top: 2%; width: 15rem;"> 
+          </div>
+      <% }%>
+      <% if(pName.tZoneID  == "Europe/Zagreb"){%>
+        <div>
+          <img src="Croatia.jpg" style="margin-top: 2%; width: 15rem;">
+          
+          
+        </div>
+      <% }%>
+      <% if(pName.tZoneID == "Europe/Copenhagen"){%>
+        <div>
+          <img src="Denmark.jpg" style="margin-top: 2%; width: 15rem;">
+          
+          
+        </div>
+      <% }%>
+      <% if(pName.tZoneID  == "America/Jamaica"){%>
+        <div>
+          <img src="Jamaica.jpg" style="margin-top: 2%; width: 15rem;">
+          
+          
+        </div>
+      <% }%>
+      <% if(pName.tZoneID  == "Asia/Manila"){%>
+        <div>
+          <img src="Philippines.png" style="margin-top: 2%; width: 15rem;">    
+        </div>
+      <% }%>
+      </div>
+    </center>
+    <!-- Table -->
+    
+    <div style="margin-top: 8%;">
+        <div class= "d-flex justify-content-center">
+        <div class="card text-white bg-primary mb-3" style="width: 50rem;">
+            <div class="card-header"><h2>Person</h2></div>
+            <div class="card-body">
+            <p class="card-text">
+              <form action="/personlist" method="POST">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control w-75" value='<%= pName.personName %>'readonly> 
+                    </div>
+                    <div class="form-group">
+                        <label>Nationality</label>
+                        <input  type="text" class="form-control w-25"  value='<%= pName.nationality %>' readonly>
+                    </div>
+                    <div class="form-group">        
+                        <label for="birthday">Birthday:</label>
+                        <input type="date"  value='<%= pName.bDate %>'readonly>
+                    </div>
+                    <div class="form-group">             
+                      <input type="text"  name="selectTimezone" value='<%= pName.tZoneID %>' readonly hidden>
+                    </div>
+                    <div>
+                        <button class="btn btn-success w-25">BACK</button>
+                </form>
+                    </div>
+            </p>      
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+
+</html> 

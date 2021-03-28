@@ -1,0 +1,16 @@
+{
+  "name": "sa-1",
+  "version": "1.0.0",
+  "description": "Summative Assessment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Carlo M. Ebreo",
+  "license": "ISC",
+  "dependencies": {
+    "global-time": "^1.4.1",
+    "mongoose": "^5.12.2"
+  }
+}
